@@ -9,3 +9,5 @@
 - Div 2
   - Contains divs for selectors and input display, as well as input box
 - Header
+
+-ask about the images for buddy not displaying

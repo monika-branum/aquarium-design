@@ -6,11 +6,13 @@ import Editor from './components/Editor.js';
 
 function App() {
   const [buddy, setBuddy] = useState('');
+  const [axolotl, setAxolotl] = useState('');
+  const [coral, setCoral] = useState('');
   return (
     <div className="App">
       <Header />
-      <Tank buddy={buddy} />
-      <Editor setBuddy={setBuddy} />
+      <Tank buddy={(buddy, axolotl, coral)} />
+      <Editor setBuddy={setBuddy} setAxolotl={setAxolotl} setCoral={setCoral} />
     </div>
   );
 }
