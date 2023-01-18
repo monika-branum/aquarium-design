@@ -1,7 +1,16 @@
 import React from 'react';
 import './Editor.css';
 
-export default function Editor({ setBuddy, setAxolotl, setCoral }) {
+export default function Editor({
+  setBuddy,
+  setAxolotl,
+  setCoral,
+  setAffirmations,
+  setAffirmation,
+}) {
+  const handleChange = (e) => {
+    setAffirmations((currentState) => [currentState, e.target.value]);
+  };
   return (
     <div>
       <select onChange={(e) => setBuddy(e.target.value)}>
@@ -26,9 +35,8 @@ export default function Editor({ setBuddy, setAxolotl, setCoral }) {
         <option value="coralpurple">Purple</option>
         <option value="coralpurple2">Also Purple</option>
       </select>
-    </div>
-    <div>
-      <input type="text"
+
+      <input type="text" onChange={handleChange}></input>
     </div>
   );
 }
